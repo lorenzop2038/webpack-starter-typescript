@@ -46,4 +46,17 @@ const usuariosRef = db.collection('usuarios');
 
 
 // select * from usuarios;
-usuariosRef.get().then( snap => retornaDocumentos(snap) ) 
+// usuariosRef
+//         .onSnapshot ( retornaDocumentos )
+
+// usuariosRef.get().then( snap => retornaDocumentos(snap) )
+
+/*
+    select * from usuarios
+     -- where salario > 1800 
+        And activo == true 
+        
+*/
+usuariosRef.where('salario','>=', 1800)
+           .where('activo','==', true)
+      .get().then( retornaDocumentos );
