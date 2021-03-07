@@ -25,12 +25,23 @@ const usuariosRef = db.collection('usuarios');
 //      });
 
 // update usuarios set activo = false where.... 
-      usuariosRef
-      .doc('ZnvhfTEj3MhpDcewgNkh')
-      .set({
-          activo: true,
-          edad: 30,
-          casado: true,
-          id: 2131
-      });
+
+//Destructivo
+//      usuariosRef
+//      .doc('ZnvhfTEj3MhpDcewgNkh')
+//      .set({
+//          activo: true,
+//          edad: 30,
+//          casado: true,
+//          id: 2131
+//      });
+
+// delete from usuarios where id = 'xx'
+//usuariosRef
+//      .doc('ZnvhfTEj3MhpDcewgNkh')
+//      .delete()
+//      .then( () => console.log('Borrado') )
+//      .catch( e => console.log('error', e ));
+
+
 
